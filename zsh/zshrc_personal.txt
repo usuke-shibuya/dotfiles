@@ -1,0 +1,41 @@
+# common
+HISTSIZE=10000
+setopt correct
+autoload -Uz compinit && compinit
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
+
+# alias
+alias gad="git add"
+alias gbr="git branch"
+alias gch="git checkout"
+alias gcm="git checkout master"
+alias gco="git commit"
+alias gdf="git diff"
+alias gg="git grep"
+alias glog="git log"
+alias gps="git_push.sh"
+alias gpl="git pull"
+alias gst="git status"
+alias rr="source ~/.zshrc"
+alias less="less -R"
+alias be="bundle exec"
+alias bi="bundle install --path vendor/bundle"
+alias db="mysql.sh --database=chatbot_development"
+alias dbl="mysql.sh -e \"show databases\""
+alias d="docker"
+
+# bin
+if [ -d $HOME/bin ]; then
+  export PATH="$HOME/bin:$PATH"
+fi
+
+# homebrew
+if [ -d /opt/homebrew/bin ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+# rust
+if [ -d $HOME/.cargo/bin ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi

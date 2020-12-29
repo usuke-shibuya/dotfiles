@@ -1,0 +1,14 @@
+[include]
+	path = .gitconfig_local
+[core]
+	precomposeunicode = true
+	editor = /usr/bin/vim
+	quotepath = false
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+[push]
+	default = simple
